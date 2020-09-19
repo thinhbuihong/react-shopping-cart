@@ -4,7 +4,7 @@ export const addToCart = ( product) =>{
   return (dispatch, getSate) =>{
     const cartItems = getSate().cart.cartItems.slice();
     let alreadyExists = false;
-    cartItems.map(x=>{
+    cartItems.forEach(x=>{
       if(x._id === product._id){
         alreadyExists=true;
         x.count++;
